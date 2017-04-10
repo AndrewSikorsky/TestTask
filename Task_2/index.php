@@ -1,7 +1,7 @@
 <?php 
 
-$mysqli = new mysqli('localhost','root','66677666','test_task_2');
-//$mysqli = new mysqli('host','username','password','database_name');
+//Введите ваши данные:
+$mysqli = new mysqli('localhost','username','password','database_name');
 
 if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
@@ -86,10 +86,6 @@ foreach($d_task as $product) {
     $sum++;
     echo '<p> Категория '. $product['category_id'] . ' - '  . $product['name'] .'</p>';
 }
-//$sum = 0;
-//foreach(array_unique($d_task) as $product) {
-//    $sum++;
-//}
 echo '<p> Общее количество уникальных товаров: '  . $sum .'</p>';
 
 
